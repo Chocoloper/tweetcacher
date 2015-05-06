@@ -1,0 +1,254 @@
+\documentclass[11pt]{beamer}
+\usetheme{Pittsburgh}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{color}
+\author{Gordon Lawrenz, Oleg Chernikov, Alina Shigabutdinova, Yevhen Kuznietsov}
+\title[Exercise 1]{Real Time Search in Microblogs: Exercise 1}
+%\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+\institute{RWTH Aachen} 
+%\date{} 
+\subject{Real Time Search in Microblogs} 
+
+\begin{document}
+	
+	\begin{frame}
+	\titlepage
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\tableofcontents
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Real-time search}
+        Search - process of information retrieval according to the information need\\
+Real-time search aims at:
+		\begin{itemize}
+			\item
+				Providing users with the most recent content
+            \item
+            	Collecting content from specific sources (such as social media)
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{???}
+        Today the speed of information appearance in the internet is so big that it becomes 		impossible to get all the latest changes immediately
+		\begin{itemize}
+			\item
+				Example1
+            \item
+            	Example2
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+	
+    \begin{frame}
+		\frametitle{Real-time search engines}
+		\begin{itemize}
+			\item
+				Do not crawl for information, instead use either own api or social media source api in order to get direct feed
+            \item
+            	Do not aggregate the data as traditional search engines do
+            \item
+            	Indexing structures are optimized for real-time ranking
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    \begin{frame}
+		\frametitle{Real-time search engines}
+		\begin{itemize}
+			\item
+				OneRiot (closed)
+            \item
+            	Collecta (paused)
+            \item
+            	Google's "latest" (still not real-time)
+            \item
+            	SocialMention (slow, but results seem to be relevant)
+            \item
+            	Topsy (fast, result seem to be relevant)
+            \item
+            	Social searcher (not slow, many irrelevant results)
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    \begin{frame}
+		\frametitle{Real-time search challenges}
+		\begin{itemize}
+			\item
+				Spam filtering
+            \item
+            	Relevance of results
+            \item
+            	Commercial attractiveness
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    \begin{frame}
+		\frametitle{Commercial attractiveness of real-time search}
+        For search engines the main part of income usually accounts for online advertising (Google – 89.5 percent in 2014)\\
+Issues:
+		\begin{itemize}
+			\item
+				Popularity of real-time search
+            \item
+            	Specificity of real-time search queries
+            \item
+            	Pollution
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    \begin{frame}
+		\frametitle{Perspectives}
+        
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    \begin{frame}
+		\frametitle{Something about user behaviour or other statistics}
+    \end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+	\begin{frame}
+		\frametitle{Related Work}
+		\begin{enumerate}
+			\item
+				C. Chen, F. Li, B. C. Ooi, and S. Wu, “TI: An efficient indexing mechanism for real-time search on tweets," 2011
+			\item
+				M. Busch, K. Gade, B. Larson, P. Lok, S. Luckenbill, and J. Lin, "Earlybird: Real-time search at twitter," 2012
+			\item
+				 J. Yao, B. Cui, Z. Xue, and Q. Liu, "Provenance-based indexing support in micro-blog platforms," 2012
+			\item
+				A. Magdy, M. F. Mokbel, S. Elnikety, S. Nath, and Y. He., "Mercury: A Memory-Constrained Spatio-temporal Real-time Search on Microblogs", 2014
+			\item
+				A. Magdy, A. M. Aly, M. F. Mokbel, S. Elnikety, Y. He, S. Nath, "Mars: Real-time Spatio-temporal Queries on Microblogs", 2014
+		\end{enumerate}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+    
+    %---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Research directions}
+		\begin{itemize}
+			\item
+				Ranking microblogs with respect to queries
+            \item
+            	Indexing microblogs for efficient search
+            \item
+            	Analyzing the characteristics of microblog data and
+queries
+		\end{itemize}
+	\end{frame}
+	
+    %---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{TI: An efficient indexing mechanism for real-time search on tweets}
+        \includegraphics[]{Tweet_Table}
+        \begin{itemize}
+			\item
+            	Indexing approach
+            \item
+            	Reduction of indexing costs without loss of quality
+            \item
+            	\textcolor{red}{But:} relevant responses to the queries are not always included
+        \end{itemize}
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+    
+    %---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Earlybird: Real-time search at twitter}
+           \begin{table}[h!]
+             \begin{center}
+               \begin{tabular}{ p{5cm}  c }
+                  \begin{minipage}{5cm}
+                    \begin{itemize}
+                      \item High speed indexing and query evaluation
+                      \item Use of concurrency
+                      \item \textcolor{red}{But:} Relevance of the tweet is judged only by its freshness
+                    \end{itemize}
+                  \end{minipage}
+                  &
+                  \begin{minipage}{.5\textwidth}
+                    \includegraphics[width=\linewidth, height=60mm]{Earlybird}
+                  \end{minipage}
+                \end{tabular}
+              \end{center}
+            \end{table}
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+    
+    %---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Provenance-based indexing support in micro-blog platforms}
+        \begin{table}[h!]
+             \begin{center}
+               \begin{tabular}{ p{5cm}  c }
+                  \begin{minipage}{5cm}
+                    \begin{itemize}
+                      \item Search of the origin of the micro-blog
+                      \item Pursues different goal though
+                    \end{itemize}
+                  \end{minipage}
+                  &
+                  \begin{minipage}{.5\textwidth}
+                    \includegraphics[width=\linewidth, height=60mm]{provenance}
+                  \end{minipage}
+                \end{tabular}
+              \end{center}
+            \end{table}
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Mercury: A Memory-Constrained Spatio-temporal Real-time Search on Microblogs}
+		Mercury is a system for real-time support of \textcolor{red}{top-k} \textcolor{blue}{spatio-temporal queries} on microblogs, where users are able to browse recent microblogs near their locations.
+		\begin{center}
+			\includegraphics[scale=0.8]{mercury_arch.jpg}
+		\end{center}
+	\end{frame}
+	
+	%---------------------------------------------------------------------------
+	
+	\begin{frame}
+		\frametitle{Mars: Real-time Spatio-temporal Queries on Microblogs}
+		Mars uses the microblogs location information to support a wide variety of important \textcolor{blue}{spatio-temporal queries} on microblogs, including \textcolor{blue}{range, nearest-neighbor, and aggregate queries}. 
+		\begin{center}
+			\includegraphics[scale=0.7]{mars_arch.jpg}		
+		\end{center}
+	\end{frame}
+
+\end{document}
